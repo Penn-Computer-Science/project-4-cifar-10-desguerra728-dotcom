@@ -19,7 +19,7 @@ Your goal is to:
 ## Step 1: Load the Dataset
 Use the built-in Keras dataset loader:
 ```python
-from tensorflow.keras.datasets import cifar10
+from keras.datasets import cifar10
 (x_train, y_train), (x_test, y_test) = cifar10.load_data()
 ```
 
