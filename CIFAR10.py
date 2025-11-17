@@ -49,20 +49,20 @@ batch_size = 128
 # dictate num of classes; 10 numbers
 num_classes = 10
 # num epochs; go through data 5 times
-epochs = 5
+epochs = 10
 
 # build model
 model = tf.keras.models.Sequential(
     [
         tf.keras.layers.Conv2D(64, (10,10), padding='same', activation='relu', input_shape = input_shape),
-        tf.keras.layers.Conv2D(32, (3,3), padding='same', activation='relu', input_shape = input_shape),
+        tf.keras.layers.Conv2D(64, (3,3), padding='same', activation='relu', input_shape = input_shape),
         tf.keras.layers.MaxPool2D(),
         tf.keras.layers.Dropout(0.60),
 
-        tf.keras.layers.Conv2D(32, (5,5), padding='same', activation='relu', input_shape = input_shape),
+        tf.keras.layers.Conv2D(64, (5,5), padding='same', activation='relu', input_shape = input_shape),
         tf.keras.layers.Dropout(0.60),
-        
-        tf.keras.layers.Conv2D(32, (10,10), padding='same', activation='relu', input_shape = input_shape),
+
+        tf.keras.layers.Conv2D(64, (10,10), padding='same', activation='relu', input_shape = input_shape),
         tf.keras.layers.MaxPool2D(),
         tf.keras.layers.Flatten(),
         tf.keras.layers.Dense(num_classes, activation='softmax')
@@ -117,3 +117,4 @@ plt.xlabel('Predicted Label')
 plt.ylabel('True Label')
 plt.title('Confusion Matrix')
 plt.show()
+
