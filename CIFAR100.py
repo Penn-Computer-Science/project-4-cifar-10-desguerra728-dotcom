@@ -49,7 +49,7 @@ batch_size = 128
 # dictate num of classes; 100 numbers
 num_classes = 100
 # num epochs; go through data 5 times
-epochs = 5
+epochs = 10
 
 # build model
 model = tf.keras.models.Sequential(
@@ -57,19 +57,23 @@ model = tf.keras.models.Sequential(
         tf.keras.layers.Conv2D(64, (5,5), padding='same', activation='relu', input_shape = input_shape),
         tf.keras.layers.Conv2D(64, (3,3), padding='same', activation='relu', input_shape = input_shape),
         tf.keras.layers.MaxPool2D(),
-        tf.keras.layers.Dropout(0.60),
+        tf.keras.layers.Dropout(0.40),
 
+        tf.keras.layers.Conv2D(128, (5,5), padding='same', activation='relu', input_shape = input_shape),
         tf.keras.layers.Conv2D(128, (3,3), padding='same', activation='relu', input_shape = input_shape),
+        tf.keras.layers.MaxPool2D(),
+
         tf.keras.layers.Conv2D(64, (5,5), padding='same', activation='relu', input_shape = input_shape),
+        tf.keras.layers.Conv2D(64, (3,3), padding='same', activation='relu', input_shape = input_shape),
         tf.keras.layers.MaxPool2D(),
         tf.keras.layers.Dropout(0.30),
 
-        tf.keras.layers.Conv2D(64, (3,3), padding='same', activation='relu', input_shape = input_shape),
         tf.keras.layers.Conv2D(64, (5,5), padding='same', activation='relu', input_shape = input_shape),
-        tf.keras.layers.Dropout(0.10),
-
+        tf.keras.layers.Conv2D(64, (3,3), padding='same', activation='relu', input_shape = input_shape),
         tf.keras.layers.MaxPool2D(),
-        tf.keras.layers.Conv2D(64, (5,15), padding='same', activation='relu', input_shape = input_shape),
+        tf.keras.layers.Dropout(0.40),
+
+        tf.keras.layers.Conv2D(64, (5,5), padding='same', activation='relu', input_shape = input_shape),
         tf.keras.layers.Conv2D(64, (3,3), padding='same', activation='relu', input_shape = input_shape),
         tf.keras.layers.MaxPool2D(),
 
