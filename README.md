@@ -1,86 +1,31 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/1IJxXOgr)
-# TiCs25P4
-Topics in CS: Project 4: Artificial Intelligence
+## Reflection
+
+**What differences did you notice between MNIST and CIFAR-10?**
+- The images from CIFAR-10 are much more complex, and the images within each class are more disimilar.
+- It was much harder to build the model for it to reach higher accuracy values without overfitting.
+- Since I had to increase the number of filters from 32 to 64 for CIFAR-10, the time per epoch increased significantly.
+
+**What changes to your architecture helped performance?**
+- Increasing the dimensions of the Conv2D increased validation accuracy.
+- Increasing percent dropout generallly decreased the amount of overfit (but sometimes my graphs ended up oscillating).
+- - I needed to balance out the amount of dropout to the layer 
+
+**If you had more time, what improvements would you try next?**
+- Testing specifically with the sequence of the layers; changing the order (I mostly just changed the amount of layers and their settings). 
+- Changing the dimensions for the Conv2D to ones I haven't already tried.
 
 
-# CIFAR-10 Classification Assignment
+## Charts
+### CIRFAR-10
+![CIFAR-10-Confusion-Matrix
+](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/c431a7bfc73bcde663b9eac632336dfff2ed1975/CIFAR-10-plots/confusion-matrix.png)
 
-## Overview
-In this assignment, you’ll adapt your existing MNIST classification code to work with the **CIFAR-10** dataset — a more complex set of 60,000 color images in 10 classes (airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck).
+![CIFAR-10-Validation-Loss
+](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/f04475d6df48763002c20460765eea041491d838/CIFAR-10-plots/loss-and-accuracy.png)
 
-Your goal is to:
-1. Load and preprocess the CIFAR-10 dataset.
-2. Modify your MNIST model to handle 32×32×3 color images.
-3. Train and evaluate your model.
-4. Compare results with your MNIST model.
+### CIRFAR-100
+![CIFAR-10-Confusion-Matrix
+](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/c431a7bfc73bcde663b9eac632336dfff2ed1975/CIFAR-10-plots/confusion-matrix.png)
 
----
-
-## Step 1: Load the Dataset
-Use the built-in Keras dataset loader:
-```python
-from keras.datasets import cifar10
-(x_train, y_train), (x_test, y_test) = cifar10.load_data()
-```
-
-## Normalize the images to [0,1]
-```python
-x_train = x_train.astype('float32') / 255.0
-x_test = x_test.astype('float32') / 255.0
-```
-Print the dataset shapes and visualize a few samples using matplotlib
-
-
-## Step 2. Modify your MNIST Model
-  -  Input shape is 32x32x3, not 28 x 28 x 1
-  -  Convolutional layers should have 64 filters, not 32
-  -  Use **Pooling** and **Dropout** as needed to prevent overfitting
-  -  Output layer should still be **Dense** with 10 classes and a **softmax** activation
-
-## Step 3. Compile and Train
-
-  -  Use Adam optimzer and appropriate the loss
-```python
-model.compile(optimizer='adam',loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-```
-  -  Train for *at least* 10 epochs
-```python
-history = model.fit(x_train, y_train,epochs=10,validation_data=(x_test, y_test))
-```
-  -  Save your training history and visualize
-    -  Accuracy over epochs
-    -  Loss over epochs
-## Step 4. Evaluate and Visualize Results
-  -  Print test acuracy
-  -  Display a few sample preditions alongisde their true labels
-  -  Create at least one plot comparing training and validation accuracy
-## Step 5. Reflection
- -  Add a short Markdown section at the end of your notebook:
-   -  What differences did you notice between MNIST and CIFAR-10?
-   -  What changes to your architecture helped performance?
-   -  If you had more time, what improvements would you try next?
-
-## Submission:
-Be sure to include the following in your submission - Push to GitHub with a comment of "FINISHED" when complete
-  -  cifar10.py -  Your python script
-  -  Model architecture summary - use model.summary()
-  -  Trianing plots - accuracy and loss vs. epochs
-  -  Test accuracy - final evaluation score
-  -  Sample predictions -  visual examples of the model output
-  -  Reflection section -  written markdown cell with your observations
-
-## Rubric (Total: 100 points)
-
-| Category | Points | Description |
-|-----------|:------:|-------------|
-| **Data Loading & Preprocessing** | **15** | Properly loads CIFAR-10 data, normalizes inputs, and visualizes a few samples. |
-| **Model Architecture** | **25** | CNN architecture adapted from MNIST, with appropriate layers for color images (32×32×3). |
-| **Training & Evaluation** | **25** | Model compiles, trains for required epochs, and reports training/validation accuracy. |
-| **Visualization** | **15** | Includes at least one accuracy/loss plot and sample prediction visualizations. |
-| **Reflection** | **20** | Clear written discussion of differences between MNIST and CIFAR-10, performance observations, and ideas for improvement. |
-| **Total** | **100** | — |
-
-
-
-
-
+![CIFAR-10-Validation-Loss
+](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/f04475d6df48763002c20460765eea041491d838/CIFAR-10-plots/loss-and-accuracy.png)
