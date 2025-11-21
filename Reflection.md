@@ -15,6 +15,10 @@
 
 ## Charts
 **CIRFAR-10**
-[Chart
+![CIFAR-10-Confusion-Matrix
 ](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/c431a7bfc73bcde663b9eac632336dfff2ed1975/CIFAR-10-plots/confusion-matrix.png)
+
+![CIFAR-10-Validation-Loss
+](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/f04475d6df48763002c20460765eea041491d838/CIFAR-10-plots/loss-and-accuracy.png)
+
 **CIRFAR-100**
