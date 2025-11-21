@@ -11,3 +11,10 @@
 **If you had more time, what improvements would you try next?**
 - I would try changing the order of some of my layers to see how different layers are 'related' to each other.
 - test more dimensions for the Conv2D
+
+
+## Charts
+**CIRFAR-10**
+[Chart
+](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/c431a7bfc73bcde663b9eac632336dfff2ed1975/CIFAR-10-plots/confusion-matrix.png)
+**CIRFAR-100**
