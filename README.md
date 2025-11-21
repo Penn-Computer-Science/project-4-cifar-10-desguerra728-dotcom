@@ -18,14 +18,15 @@
 ## Charts
 ### CIRFAR-10
 ![CIFAR-10-Confusion-Matrix
-](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/c431a7bfc73bcde663b9eac632336dfff2ed1975/CIFAR-10-plots/confusion-matrix.png)
+](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/4c66931f18482922f20d94f0cec8ec9ca7b35e2b/CIFAR-10/Plots/confusion-matrix.png)
 
-![CIFAR-10-Validation-Loss
-](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/f04475d6df48763002c20460765eea041491d838/CIFAR-10-plots/loss-and-accuracy.png)
+![CIFAR-10-Validation-Loss](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/4c66931f18482922f20d94f0cec8ec9ca7b35e2b/CIFAR-10/Plots/loss-and-accuracy.png)
 
 ### CIRFAR-100
-![CIFAR-10-Confusion-Matrix
-](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/c431a7bfc73bcde663b9eac632336dfff2ed1975/CIFAR-10-plots/confusion-matrix.png)
+![CIFAR-100-Confusion-Matrix-Just-Color
+](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/4c66931f18482922f20d94f0cec8ec9ca7b35e2b/CIFAR-100/Plots/Confusion%20Matrix%20Col.png)
 
-![CIFAR-10-Validation-Loss
-](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/f04475d6df48763002c20460765eea041491d838/CIFAR-10-plots/loss-and-accuracy.png)
+![CIFAR-100-Confusion-Matrix](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/4c66931f18482922f20d94f0cec8ec9ca7b35e2b/CIFAR-100/Plots/Confusion%20Matrix%20Num.png)
+
+![CIFAR-100-Accuracy-Loss
+](https://github.com/Penn-Computer-Science/project-4-cifar-10-desguerra728-dotcom/blob/4c66931f18482922f20d94f0cec8ec9ca7b35e2b/CIFAR-100/Plots/Loss%20Accuracy%20Plot.png)
