@@ -71,7 +71,7 @@ model = tf.keras.models.Sequential(
         tf.keras.layers.Conv2D(64, (5,5), padding='same', activation='relu', input_shape = input_shape),
         tf.keras.layers.Conv2D(64, (3,3), padding='same', activation='relu', input_shape = input_shape),
         tf.keras.layers.MaxPool2D(),
-        tf.keras.layers.Dropout(0.40),
+        tf.keras.layers.Dropout(0.20),
 
         tf.keras.layers.Conv2D(64, (5,5), padding='same', activation='relu', input_shape = input_shape),
         tf.keras.layers.Conv2D(64, (3,3), padding='same', activation='relu', input_shape = input_shape),
