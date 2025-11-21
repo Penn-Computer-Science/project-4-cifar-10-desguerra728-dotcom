@@ -8,7 +8,7 @@
 **What changes to your architecture helped performance?**
 - Increasing the dimensions of the Conv2D increased validation accuracy.
 - Increasing percent dropout generallly decreased the amount of overfit (but sometimes my graphs ended up oscillating).
-- - I needed to balance out the amount of dropout to the layer 
+- - I needed to balance out the amount of dropout between too much and too little.
 
 **If you had more time, what improvements would you try next?**
 - Testing specifically with the sequence of the layers; changing the order (I mostly just changed the amount of layers and their settings). 
